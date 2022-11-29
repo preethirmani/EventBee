@@ -12,18 +12,72 @@ code {
     monospace;
 }
 
-Nav {
+
+
+.image-background {
   
-}
-
-.navbar-brand {
-color: orange;
-
 }
 
 main {
   min-height: 80vh;
   border: 2inch;
-  border-style: solid;
+}
+.image-container{
+  width: 70%;
+ 
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.h3-title {
+  margin-top: 10px;
+}
+
+
+.col1 {
+
+}
+
+.col2 {
   
+}
+
+.row3-col1{
+  border-style: solid;
+}
+.row3-col2 {
+  border-style: solid;
+}
+
+.p-description {
+  margin-top: 30px;
+}
+
+.div-host{
+  margin-top : 30px;
+}
+.span-host {
+  color : blue;
+  margin-left: 10px;
+}
+
+.p-rating {
+  margin-top : 30px;
+}
+
+.h4-sub {
+  margin-top : 30px;
+}
+
+.div-date {
+  border-right: 2px solid darkgray;
+}
+
+.span-dateHeading {
+  margin-left: 10px;
+  font-size:large;
+}
+
+.span-time {
+  margin-left: 10px;
 }

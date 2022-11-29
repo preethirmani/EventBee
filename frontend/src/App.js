@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Header />
       <main>
-        <Container>
+        <Container className='border-primary'>
           <Routes>
             <Route path='/' element={<HomeScreen />} exact />
             <Route path='/program/:id' element={<ProgramDetail/>} />

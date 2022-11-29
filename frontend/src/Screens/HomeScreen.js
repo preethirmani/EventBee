@@ -9,7 +9,7 @@ import programs from '../programs';
 const HomeScreen = () => {
   return (
     <>
-    Home Screenx
+   
      <Row>
         {
           programs.map(program => (
