@@ -14,39 +14,27 @@ code {
 
 
 
-.image-background {
-  
-}
+
 
 main {
   min-height: 80vh;
   border: 2inch;
+  
+
 }
 .image-container{
   width: 70%;
- 
   margin-top: 10px;
   padding: 10px;
+  padding: 30px;
+}
+
+.image-background {
+ 
 }
 
 .h3-title {
   margin-top: 10px;
-}
-
-
-.col1 {
-
-}
-
-.col2 {
-  
-}
-
-.row3-col1{
-  border-style: solid;
-}
-.row3-col2 {
-  border-style: solid;
 }
 
 .p-description {
@@ -73,7 +61,7 @@ main {
   border-right: 2px solid darkgray;
 }
 
-.span-dateHeading {
+.span-date-loc {
   margin-left: 10px;
   font-size:large;
 }
@@ -81,3 +69,19 @@ main {
 .span-time {
   margin-left: 10px;
 }
+
+.div-location {
+  margin-left: 40px;
+}
+.span-location {
+
+  margin-top: 30px;
+
+}
+
+.map-container {
+  width: 30%;
+  height: 50vh;
+
+}
+

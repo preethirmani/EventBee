@@ -14,11 +14,11 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav  className="ms-auto">
-            <Nav.Link href="/">Create Event</Nav.Link>
+            <LinkContainer to="/program/create/">
+              <Nav.Link >Create Event</Nav.Link>
+            </LinkContainer>
             <Nav.Link href="/">Login</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Sign Up
-            </Nav.Link>
+          
           </Nav>
         </Navbar.Collapse>
       </Container>

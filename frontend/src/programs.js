@@ -14,7 +14,13 @@ const programs = [
     seatsAvailable:'',
     category:'Health',
     requirements:'',
-    about:'',
+    about:`Movement is the key to maintaining mental and physical health.
+
+This series does seasonal training to help you develop a wide range of skills which will enhance both your health and your practice. We practices basic Tai Chi / Qigong skills as posting, walking, breathing, stretching, energy work, bone tapping and hand movements.
+
+Even outwardly simple movement when practiced correctly promote organ health, lower body strength and mental focus.
+
+Enjoy learning at home through our online lessons`,
     duration: '30 minutes'
   },
   {
@@ -97,21 +103,29 @@ const programs = [
 
   {
     _id: 6,
-    name:'Decentralized Dance Party ',
-    image: '/images/danceParty.jpg',
-    description:'The Decentralized Dance Party is an Open-Source Party Movement on a mission to unite the world in Celebration and win the Nobel Peace Prize for Partying ',
-    host:'Decentralized Dance Party',
-    date:'Sat, Dec 24, 2022',
-    time:'5:00 PM EST',
-    location:'Online',
-    price:'Free',
-    rating:'4.5',
-    numReviews:'170',
-    seatsAvailable:'',
-    category:'Health',
+    name:`Midnight in Paris - A 2022 New Year's Eve Soirée`,
+    image: '/images/midnight-in-Paris.jpg',
+    description:`Part of the 2022 New Year's Eve Party collection
+Party Like it's 1929....in PARIS! And Ring in 2023!!!`,
+    host:'Epiphany Events',
+    date:'Sat, Dec 31, 2022, 8:00 PM – Sun, Jan 1, 2023, 1:30 AM PST',
+    time:'',
+    location:'15902 Redmond - Woodinville Road Northeast #Suite D6 Woodinville, WA 98072',
+    price:'35-135',
+    rating:'',
+    numReviews:'',
+    seatsAvailable:13,
+    category:'Party',
     requirements:'',
-    about:'',
-    duration:'30 minutes'
+    about:`Enter the world of 1920s Paris to drink and dance the night away to welcome 2023 in style.
+
+The Winemakers Reserve (Woodinville) will be transformed into the world-famous Moulin Rouge Cabaret & Lounge for the evening. Throughout the night, guests will revel in lively entertainment, dancing, a decadent Parisian Patisserie, Parisian-themed specialty cocktails, Absinthe drip fountain cocktails, party hats/noisemakers & a midnight countdown.
+
+The Seattle Solid Gold Band will be performing Big Band favorites, Sinatra-style crooner songs and Swing classics in the main Tasting Room ~ which will be the main stage of the "Moulin Rouge". Dance the night away, or enjoy the view from your RESERVED seating (for two only -- limited reserved seating available) closest to the stage/dance floor. There will be additional seating throughout the venue, that will not be reserved. This room is where all the action is and will be more lively and loud.
+
+The Cellar Room is a smaller room off the main tasting room and will feature white linen'd table tops, twinkling lights and candles - as well as four plush seating areas. This is where the charming Lu Lu Swing Band (an all-female band of five) will enchant guests with classic Parisian and French songs. The vibe in this room is more chill....romantic...Parisian Bistro/Lounge.
+`,
+    duration:''
   }
 
 ];

@@ -1,7 +1,9 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
-import {Container, Row, Col, Image, Card} from 'react-bootstrap'
+import {Container, Row, Col, Image, Card, ListGroup, ListGroupItem} from 'react-bootstrap';
+import Map from '../components/Map';
 import progrmas from '../programs';
+
 
 
 const ProgramDetail = () => {
@@ -11,20 +13,34 @@ const ProgramDetail = () => {
     String(p._id) === params.id
   );
   console.log(progrm.name);
+
+  var divImage = {
+    backgroundImage : `url(${progrm.image})`
+  };
+  
  
   return (
     <>
    
      
         <Container className='image-container'>
-          <div className='image-background'>
-            <div className='col-9'>
+          <Row>
+            <div className='image-background col-9' style={{}}>
              <Image src={progrm.image} alt='Event' fluid />
             </div>
-          </div>
-         
-        
-        
+            <div className='col-3 row1Col2'>
+              <Card className='border-dark mb-3'>
+                  <Card.Body>
+                    <Card.Text><strong>{progrm.price}</strong></Card.Text>
+                    <button type="button"  className="btn btn-primary"
+                    disabled = {progrm.seatsAvailable === 0}>Tickets</button>
+                  </Card.Body>
+               
+                   
+              </Card>
+            </div>
+          </Row>
+          
           <Row className='row1'>
             <Col className='col1 col-9'>
               <h3 className='h3-title'><strong>{progrm.name}</strong></h3>
@@ -38,7 +54,7 @@ const ProgramDetail = () => {
             </Col>
           </Row>
 
-          <Row>
+          <Row className='row4'>
             <Col className='col-3'>
               <div className='div-host'>
                 <span>By</span>
@@ -51,31 +67,48 @@ const ProgramDetail = () => {
           </Row>
 
 
-          <Row>
+          <Row className='row5'>
             <Col>
               <h4 className='h4-sub'><strong>When and Where</strong></h4>
             </Col>
           </Row>
 
-          <Row>
+          <Row className='row6'>
             <Col className='col-4'>
               <div className='div-date'>
                 <p>
-                <i class="fas fa-regular fa-calendar"></i>
-                 <span className='span-dateHeading'> <strong>Date and Time</strong></span>
+                <i className="fas fa-regular fa-calendar"></i>
+                 <span className='span-date-loc'> <strong>Date and Time</strong></span>
                 </p>
                 <div><span className='span-date'>{progrm.date}</span>
                    <span className='span-time'>{progrm.time}</span></div>
               </div>
             </Col>
-            <Col className='row3-col1 col-5'>
+            <Col className='col-5'>
               <div className='div-location'>
-                <h6><strong>Location</strong></h6>
-
+                <p>
+                <i class="fas fa-regular fa-globe"></i>
+                <span className='span-date-loc'><strong>Location</strong></span>
+                </p>
+                <div>
+                  <span >{progrm.location}</span>
+                </div>
               </div>
             </Col>
           </Row>
-    
+         
+          <Row>
+             {progrm.location != 'online'}
+             <Map address = {progrm.location}/>
+          </Row> 
+
+
+        <Row className='row6'>
+          <Col>
+            <h4 className='h4-sub'><strong>About this event</strong></h4>
+            <p >{progrm.about}</p>
+          </Col>
+        </Row>
     </Container>
         
     </>
