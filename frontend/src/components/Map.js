@@ -1,17 +1,20 @@
-import React, {useEffect, useState, useMemo} from "react";
-import {GoogleMap, useLoadScript, MarkerF, Marker} from '@react-google-maps/api';
+import React, {useEffect, useState} from "react";
+import {GoogleMap, useLoadScript, MarkerF} from '@react-google-maps/api';
 import Geocode from 'react-geocode';
+import env from "react-dotenv";
+
 
 const Map = ({address}) => {
   const [coordinates, setCoordinates] = useState({});
   
 
   const {isLoaded} = useLoadScript({
-    googleMapsApiKey : "AIzaSyBXQ6wu3auum3p6Sykxtgyb1EvlYXQ6Bf4"
+    googleMapsApiKey : process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
 
   useEffect(() => {
-  Geocode.setApiKey("AIzaSyBXQ6wu3auum3p6Sykxtgyb1EvlYXQ6Bf4");
+  Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
+  console.log('apiKey'+process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
   Geocode.setLanguage('en');
   Geocode.fromAddress(address).then(
   (response) => {

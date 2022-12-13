@@ -70,9 +70,7 @@ main {
   margin-left: 40px;
 }
 .span-location {
-
   margin-top: 30px;
-
 }
 
 .map-container {
@@ -81,3 +79,27 @@ main {
 
 }
 
+
+
+.centerForm {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.form {
+  margin-top: 5vh;
+  width: 40%;
+  border-style: solid;
+}
+
+
+.divCreate {
+  padding: 40px;
+}
+
+.btn-submit {
+  margin-top: 5%;
+  margin-left: 42%;
+  
+}
