@@ -97,10 +97,14 @@ const ProgramDetail = () => {
             </Col>
           </Row>
          
-          <Row>
-             {progrm.location != 'online'}
-             <Map address = {progrm.location}/>
-          </Row> 
+         
+             {(progrm.location !== 'Online') 
+             ? <Row className='row7'>
+             <Map address = {progrm.location} />
+             </Row>
+             : null
+            }
+         
 
 
         <Row className='row6'>
