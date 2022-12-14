@@ -9,11 +9,11 @@ const Map = ({address}) => {
   
 
   const {isLoaded} = useLoadScript({
-    googleMapsApiKey : 'AIzaSyBXQ6wu3auum3p6Sykxtgyb1EvlYXQ6Bf4',
+    googleMapsApiKey : process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
   });
 
   useEffect(() => {
-  Geocode.setApiKey('AIzaSyBXQ6wu3auum3p6Sykxtgyb1EvlYXQ6Bf4');
+  Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
   console.log('apiKey'+process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
   Geocode.setLanguage('en');
   Geocode.fromAddress(address).then(
