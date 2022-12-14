@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import {Form, Button} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import {  useNavigate } from 'react-router-dom'
 
 const SearchEvent = () => {
