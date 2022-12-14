@@ -5,13 +5,13 @@ import Map from '../components/Map';
 import progrmas from '../programs';
 
 
-
-const ProgramDetail = () => {
-  const params = useParams();
+const SearchScreen = () => {
+   const params = useParams();
+   console.log(params.name);
   const progrm = progrmas.find(p => 
-    String(p._id) === params.id
+    String(p.name) === params.name
   );
-  console.log('program::' + progrm._id);
+
  
   return (
     <>
@@ -115,4 +115,4 @@ const ProgramDetail = () => {
   )
 }
 
-export default ProgramDetail
+export default SearchScreen

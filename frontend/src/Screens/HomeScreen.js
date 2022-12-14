@@ -1,5 +1,5 @@
 import React from 'react';
-import {Alert, Col, Row} from 'react-bootstrap';
+import {Col, Row} from 'react-bootstrap';
 import Program from '../components/Program';
 import programs from '../programs';
 

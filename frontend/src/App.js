@@ -6,6 +6,7 @@ import Header from './components/Header';
 import HomeScreen from './Screens/HomeScreen';
 import ProgramDetail from './Screens/ProgramDetail';
 import CreateEvent from './Screens/CreateEvent';
+import SearchScreen from './Screens/SearchScreen';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/' element={<HomeScreen />} exact />
             <Route path='/program/:id' element={<ProgramDetail/>} />
             <Route path='/program/create/' element={<CreateEvent/>} />
+            <Route path='/program/search/:name' element={<SearchScreen/>} />
           </Routes>
         </Container>
       </main>
