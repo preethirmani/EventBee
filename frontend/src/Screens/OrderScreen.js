@@ -59,7 +59,7 @@ const OrderScreen = () => {
   }, [dispatch, orderId, successPay, order])
 
   const successPaymentHandler = (paymentResult) => {
-    console.log(paymentResult)
+    console.log('paymentResult::'+paymentResult)
     dispatch(payOrder(orderId, paymentResult))
   } 
 
@@ -84,13 +84,7 @@ const OrderScreen = () => {
                 <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
               </p>
              
-              {order.isDelivered ? (
-                <Message variant='success'>
-                  Delivered on {order.deliveredAt}
-                </Message>
-              ) : (
-                <Message variant='danger'>Not Delivered</Message>
-              )}
+             
             </ListGroup.Item>
 
             <ListGroup.Item>
