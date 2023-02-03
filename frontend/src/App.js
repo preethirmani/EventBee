@@ -6,6 +6,7 @@ import Header from './components/Header';
 import HomeScreen from './Screens/HomeScreen';
 import LoginScreen from './Screens/LoginScreen';
 import RegisterScreen from './Screens/RegisterScreen';
+import ProfileScreen from './Screens/ProfileScreen';
 import ProgramDetail from './Screens/ProgramDetail';
 import CreateEvent from './Screens/CreateEvent';
 import SearchScreen from './Screens/SearchScreen';
@@ -26,6 +27,7 @@ function App() {
             <Route path='/' element={<HomeScreen />} exact />
             <Route path='/login' element={<LoginScreen />} />
             <Route path='/register' element={<RegisterScreen />} />
+            <Route path='/profile' element={<ProfileScreen />} />
             <Route path='/program/:id' element={<ProgramDetail/>} />
             <Route path='/program/create/' element={<CreateEvent/>} />
             <Route path='/program/search/:name' element={<SearchScreen/>} />

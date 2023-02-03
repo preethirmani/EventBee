@@ -2,7 +2,8 @@ import {configureStore, combineReducers} from '@reduxjs/toolkit';
 import {programListReducer, programDetailReducer,
         programSearchDetailReducer} from './reducers/programReducers';
 import {cartReducer} from './reducers/cartReducers';
-import {loginReducer, userRegisterReducer} from './reducers//userReducers';
+import {loginReducer, userRegisterReducer, userDetailsReducer,
+        userUpdateProfileReducer } from './reducers//userReducers';
 import {orderCreateReducer, orderDetailsReducer,
         orderPayReducer} from './reducers/orderReducers';
 
@@ -15,7 +16,9 @@ const rootReducer = combineReducers({
   userLogin: loginReducer,
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
-  orderPay: orderPayReducer
+  orderPay: orderPayReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
 })
 
 const cartItemsFromStorage = localStorage.getItem('cartItems') ?

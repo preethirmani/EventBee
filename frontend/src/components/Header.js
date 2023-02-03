@@ -22,9 +22,7 @@ const Header = () => {
         <LinkContainer to='/'>
           <Navbar.Brand className='navbar-brand'>eventbee</Navbar.Brand>
         </LinkContainer>
-        <div>
-            <SearchEvent />
-        </div>
+       
            {userInfo? (
             <NavDropdown title={userInfo.name} id='username'>
                   <LinkContainer to='/profile'>
