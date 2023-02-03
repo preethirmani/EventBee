@@ -25,9 +25,7 @@ const Header = () => {
         </LinkContainer>
           
           
-          <div>
-            <SearchEvent />
-          </div>
+         
           {userInfo? (
             <NavDropdown title={userInfo.name} id='username'>
                   <LinkContainer to='/profile'>
