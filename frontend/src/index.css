@@ -135,6 +135,12 @@ main {
 
 .nav-dropdown {
   color: #ECECEC;
-  
-  
+}
+
+.fa-user {
+  color: #ECECEC;
+}
+
+.nav-link {
+  color: #ECECEC;
 }

@@ -2,8 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
-import SearchEvent from './SearchEvent';
-import {login, logout} from '../actions/userActions';
+import {logout} from '../actions/userActions';
 
 
 const Header = () => {
@@ -34,8 +33,12 @@ const Header = () => {
                     Logout
                   </NavDropdown.Item>
                 </NavDropdown>
-          ) :   (<LinkContainer to="/login">
-                <Nav.Link className='nav-dropdown'><i className='fas fa-user'></i> Sign In</Nav.Link>
+          ) :   (<LinkContainer className='nav-dropdown' to="/login">
+                <Nav.Link >
+                  <i className='fas fa-user'>
+                    </i> 
+                    Sign In
+                    </Nav.Link>
               </LinkContainer>)}
       </Container>
     </Navbar>
