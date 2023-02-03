@@ -126,7 +126,6 @@ main {
 
 .search-form {
   display: flex;
-  
 }
 
 .search-btn {
@@ -134,3 +133,8 @@ main {
   cursor: pointer;
 }
 
+.nav-dropdown {
+  color: #ECECEC;
+  
+  
+}

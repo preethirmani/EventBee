@@ -16,7 +16,7 @@ const Header = () => {
   }
   return (
     <header>
-      <Navbar collapseOnSelect bg='dark' 
+      <Navbar collapseOnSelect bg='dark'
        expand="lg" variant='dark'>
       <Container>
         <LinkContainer to='/'>
@@ -24,7 +24,9 @@ const Header = () => {
         </LinkContainer>
        
            {userInfo? (
-            <NavDropdown title={userInfo.name} id='username'>
+            
+            <NavDropdown  title={userInfo.name} className='nav-dropdown'
+            id='basic-nav-dropdown'>
                   <LinkContainer to='/profile'>
                     <NavDropdown.Item>Profile</NavDropdown.Item>
                   </LinkContainer>
@@ -33,7 +35,7 @@ const Header = () => {
                   </NavDropdown.Item>
                 </NavDropdown>
           ) :   (<LinkContainer to="/login">
-                <Nav.Link><i className='fas fa-user'></i> Sign In</Nav.Link>
+                <Nav.Link className='nav-dropdown'><i className='fas fa-user'></i> Sign In</Nav.Link>
               </LinkContainer>)}
       </Container>
     </Navbar>

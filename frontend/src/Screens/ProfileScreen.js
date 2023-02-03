@@ -26,14 +26,18 @@ const ProfileScreen = () => {
   const { success } = userUpdateProfile
 
   useEffect(() => {
+   
     if (!userInfo) {
+      
       navigate('/login')
     } else {
-      if (!user.name) {
-        dispatch(getUserDetails('profile'))
+  
+      if (!userInfo.name) {
+        dispatch(getUserDetails())
       } else {
-        setName(user.name)
-        setEmail(user.email)
+    
+        setName(userInfo.name)
+        setEmail(userInfo.email)
       }
     }
   }, [dispatch, userInfo, user, navigate])
@@ -43,13 +47,13 @@ const ProfileScreen = () => {
     if (password !== confirmPassword) {
       setMessage('Passwords do not match')
     } else {
-      dispatch(updateUserProfile({ id: user._id, name, email, password }))
+      dispatch(updateUserProfile({ id: userInfo._id, name, email, password }))
     }
   }
 
   return (
     <Row>
-      <Col md={3}>
+      <Col md={{ span: 6, offset: 3 }}>
         <h2>User Profile</h2>
         {message && <Message variant='danger'>{message}</Message>}
         {error && <Message variant='danger'>{error}</Message>}
@@ -96,14 +100,12 @@ const ProfileScreen = () => {
             ></Form.Control>
           </Form.Group>
 
-          <Button type='submit' variant='primary'>
+          <Button className='btn-submit' type='submit' variant='primary'>
             Update
           </Button>
         </Form>
       </Col>
-      <Col md={9}>
-        <h2>My Orders</h2>
-      </Col>
+     
     </Row>
   )
 }

@@ -1,7 +1,7 @@
 import asyncHandler from 'express-async-handler';
 import User from '../models/userModel.js';
 import generateWebToken from '../utils/generateToken.js';
-import transporter from '../utils/generateEmail.js';
+import {transporter, registerEmailer, profileEmailer} from '../utils/generateEmail.js';
 
 
 const authenticateUser = asyncHandler(async (req, res) => {
@@ -41,15 +41,8 @@ const registerUser = asyncHandler(async (req, res) => {
   })
 
   if (user) {
-    console.log('user.email::'+user.email);
-    let email = {
-      from: 'info.eventbee@gmail.com',
-      to: user.email,
-      subject:'Registered Suuccessfully!',
-      html:'<h1>Welcome to Photoshare!!!</h1>'
-
-    };
-    transporter.sendMail(email, function(err, info){
+    
+    transporter.sendMail(registerEmailer(user.email), function(err, info){
       if(err) {
         console.log(err);
       }
@@ -95,14 +88,19 @@ const updateUserProfile = asyncHandler(async (req, res) => {
       user.password = req.body.password
     }
 
-    const updatedUser = await user.save()
+    const updatedUser = await user.save();
 
+     transporter.sendMail(profileEmailer(user.email), function(err, info){
+      if(err) {
+        console.log(err);
+      }
+    })
     res.json({
       _id: updatedUser._id,
       name: updatedUser.name,
       email: updatedUser.email,
       isAdmin: updatedUser.isAdmin,
-      token: generateToken(updatedUser._id),
+      token: generateWebToken(updatedUser._id),
     })
   } else {
     res.status(404)

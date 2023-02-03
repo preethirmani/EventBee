@@ -10,4 +10,22 @@ const transporter = nodemailer.createTransport(sgTransport({
   }
 }));
 
-export default transporter;
+const registerEmailer = (email) => {
+ 
+  return ({
+      from: 'info.eventbee@gmail.com',
+      to: email,
+      subject:'Registered Suuccessfully!',
+      html:'<h1>Welcome to Photoshare!!!</h1>'
+  })
+}
+const profileEmailer = (email) => {
+ 
+  return ({
+      from: 'info.eventbee@gmail.com',
+      to: email,
+      subject:'Profile Changes',
+      html:'<h1>Profile Updated Successfully!!!<h1>'
+  })
+}
+export { transporter, registerEmailer, profileEmailer };
