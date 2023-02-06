@@ -16,7 +16,7 @@ const registerEmailer = (email) => {
       from: 'info.eventbee@gmail.com',
       to: email,
       subject:'Registered Suuccessfully!',
-      html:'<h1>Welcome to Photoshare!!!</h1>'
+      html:'<h1>Welcome to EventBee!!!</h1>'
   })
 }
 const profileEmailer = (email) => {
